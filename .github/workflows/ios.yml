@@ -42,7 +42,7 @@ jobs:
 
       - name: List Build Products (Debug)
         run: |
-          find build -name "*.app" -o -name "*.appex"
+          ls -R build/Build/Products
 
       - name: Create IPA Package
         run: |
