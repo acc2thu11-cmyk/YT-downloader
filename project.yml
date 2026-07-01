@@ -8,8 +8,6 @@ targets:
     deploymentTarget: "15.0"
     sources: 
       - path: YTDownloader
-    dependencies:
-      - target: YTShareExtension
     settings:
       configs:
         Debug:
