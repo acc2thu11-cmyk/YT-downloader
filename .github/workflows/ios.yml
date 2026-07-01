@@ -18,10 +18,21 @@ jobs:
       - name: Generate Xcode Project
         run: xcodegen generate
 
-      - name: Build Xcode Project (Unsigned)
+      - name: Build Share Extension Scheme
         run: |
           xcodebuild -project YTDownloader.xcodeproj \
-                     -alltargets \
+                     -scheme YTShareExtension \
+                     -configuration Release \
+                     -sdk iphoneos \
+                     -derivedDataPath build \
+                     CODE_SIGNING_ALLOWED=NO \
+                     CODE_SIGNING_REQUIRED=NO \
+                     clean build
+
+      - name: Build Main App Scheme
+        run: |
+          xcodebuild -project YTDownloader.xcodeproj \
+                     -scheme YTDownloader \
                      -configuration Release \
                      -sdk iphoneos \
                      -derivedDataPath build \
