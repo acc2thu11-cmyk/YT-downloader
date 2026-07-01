@@ -1,0 +1,30 @@
+name: YTDownloader
+options:
+  bundleIdPrefix: com.antigravity
+targets:
+  YTDownloader:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources: 
+      - path: YTDownloader
+    settings:
+      configs:
+        Debug:
+          INFOPLIST_FILE: YTDownloader/Info.plist
+        Release:
+          INFOPLIST_FILE: YTDownloader/Info.plist
+  YTShareExtension:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: YTShareExtension
+    settings:
+      configs:
+        Debug:
+          INFOPLIST_FILE: YTShareExtension/Info.plist
+        Release:
+          INFOPLIST_FILE: YTShareExtension/Info.plist
+    dependencies:
+      - target: YTDownloader
