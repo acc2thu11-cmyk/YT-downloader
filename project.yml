@@ -5,26 +5,18 @@ targets:
   YTDownloader:
     type: application
     platform: iOS
+    bundleId: com.antigravity.YTDownloader
     deploymentTarget: "15.0"
     sources: 
       - path: YTDownloader
     settings:
-      PRODUCT_BUNDLE_IDENTIFIER: com.antigravity.YTDownloader
-      configs:
-        Debug:
-          INFOPLIST_FILE: YTDownloader/Info.plist
-        Release:
-          INFOPLIST_FILE: YTDownloader/Info.plist
+      INFOPLIST_FILE: YTDownloader/Info.plist
   YTShareExtension:
     type: app-extension
     platform: iOS
+    bundleId: com.antigravity.YTDownloader.YTShareExtension
     deploymentTarget: "15.0"
     sources:
       - path: YTShareExtension
     settings:
-      PRODUCT_BUNDLE_IDENTIFIER: com.antigravity.YTDownloader.YTShareExtension
-      configs:
-        Debug:
-          INFOPLIST_FILE: YTShareExtension/Info.plist
-        Release:
-          INFOPLIST_FILE: YTShareExtension/Info.plist
+      INFOPLIST_FILE: YTShareExtension/Info.plist
