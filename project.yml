@@ -8,6 +8,8 @@ targets:
     deploymentTarget: "15.0"
     sources: 
       - path: YTDownloader
+    dependencies:
+      - target: YTShareExtension
     settings:
       configs:
         Debug:
@@ -26,5 +28,3 @@ targets:
           INFOPLIST_FILE: YTShareExtension/Info.plist
         Release:
           INFOPLIST_FILE: YTShareExtension/Info.plist
-    dependencies:
-      - target: YTDownloader
