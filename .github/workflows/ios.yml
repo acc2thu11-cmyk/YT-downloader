@@ -40,6 +40,10 @@ jobs:
                      CODE_SIGNING_REQUIRED=NO \
                      clean build
 
+      - name: List Build Products (Debug)
+        run: |
+          find build -name "*.app" -o -name "*.appex"
+
       - name: Create IPA Package
         run: |
           mkdir -p build/Payload
