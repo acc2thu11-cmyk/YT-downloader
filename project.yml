@@ -9,6 +9,7 @@ targets:
     sources: 
       - path: YTDownloader
     settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.antigravity.YTDownloader
       configs:
         Debug:
           INFOPLIST_FILE: YTDownloader/Info.plist
@@ -21,6 +22,7 @@ targets:
     sources:
       - path: YTShareExtension
     settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.antigravity.YTDownloader.YTShareExtension
       configs:
         Debug:
           INFOPLIST_FILE: YTShareExtension/Info.plist
