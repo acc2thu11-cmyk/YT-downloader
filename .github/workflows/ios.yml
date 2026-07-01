@@ -27,7 +27,7 @@ jobs:
                      -derivedDataPath build \
                      CODE_SIGNING_ALLOWED=NO \
                      CODE_SIGNING_REQUIRED=NO \
-                     clean build
+                     build
 
       - name: Build Main App Scheme
         run: |
@@ -38,7 +38,7 @@ jobs:
                      -derivedDataPath build \
                      CODE_SIGNING_ALLOWED=NO \
                      CODE_SIGNING_REQUIRED=NO \
-                     clean build
+                     build
 
       - name: List Build Products (Debug)
         run: |
